@@ -5,8 +5,8 @@ var Deck = Class.create({
         this.generate();
     },
     generate: function() {
-        var suits = ["club", "diamond", "spade", "heart"],
-            faces = ["ace", "king", "queen", "jack", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+        var suits = SHARED_VARIABLES.suits.types,
+            faces = SHARED_VARIABLES.faces.types;
         var card;
             for (var suitIndex=0; suitIndex<suits.length; suitIndex++) {
             for (var faceIndex=0; faceIndex<faces.length; faceIndex++) {

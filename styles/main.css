@@ -48,3 +48,14 @@ input.new-hand, .hand-kind, .cards-container {
 #templates {
     display: none;
 }
+
+#new-hand-text, input {
+    float: right;
+}
+input {
+    width: 300px;
+    margin-right: 5px;
+}
+.or {
+    margin-left: 38px;
+}

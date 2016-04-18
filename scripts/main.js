@@ -3,7 +3,8 @@
         var deck = new Deck(),
             $container = $('.cards-container ul'),
             $template = $('#templates li'),
-            $newButton = $('#new-hand');
+            $newRandomButton = $('#new-hand-random'),
+            $newReadButton = $('#new-hand-text');
 
         var fillContent = function(card) {
             var renderCard = $template.clone();
@@ -13,8 +14,19 @@
             return $container.append(renderCard);
         };
 
-        $newButton.on('click',  function() {
+        $newRandomButton.on('click',  function() {
             var hand = deck.getHand(5);
+            $container.html('');
+
+            for (var i=0; i< hand.cards.length; i++) {
+                fillContent(hand.cards[i]);
+            }
+        });
+
+        $newReadButton.on('click',  function() {
+            var $inputField = $("input");
+            var hand = new Hand($inputField.val());
+            $inputField.val('');
             $container.html('');
 
             for (var i=0; i< hand.cards.length; i++) {
