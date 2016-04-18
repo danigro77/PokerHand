@@ -1,0 +1,10 @@
+body {
+  .content {
+    background: green;
+    height: 15px;
+  }
+}
+.content {
+  background: blue;
+  height: 15px;
+}
