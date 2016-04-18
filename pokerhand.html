@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Poker Hand</title>
+    <meta name="description" content="Poker Hand">
+    <meta name="author" content="Daniela Grossmann">
+
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="styles/main.css?v=1.0">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Daniela's Poker Hand</h1>
+        </header>
+
+        <div class="content">
+            <div class="cards-container"><ul></ul></div>
+            <div class="hand-kind"></div>
+            <button id="new-hand">New Hand</button>
+        </div>
+        <ul id="templates">
+            <li class="card">
+                <img src="" alt="" />
+                <span class="name"></span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="scripts/lib/jquery-2.2.3.min.js"></script>
+    <script src="scripts/lib/prototype-1.7.2.js"></script>
+    <script src="scripts/helper.js"></script>
+    <script src="scripts/card.js"></script>
+    <script src="scripts/hand.js"></script>
+    <script src="scripts/deck.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+Poker Hands
+
+Input: a string-encoded hand of cards
+Output: All of the hand rankings
+
+For example:
+> hands(“AC AD 7H 5D 5H”)
+> [“two pair”, “high card: AC”]
+
+another example:
+> hands(“AC 4D 7H 5D 6C”)
+> [“high card: AC”]
+
+A card is encoded as “[face][suit]” where suits are:
+C - Clubs
+D - Diamonds
+S - Spades
+H - Hearts
+
+The string encoding for face is:
+2 through 10
+A - Ace
+K - King
+Q - Queen
+J - Jack
+
+For a list of poker hands and their rules see https://en.wikipedia.org/wiki/List_of_poker_hands
+
+To keep the scope down only consider the following hands:
+Straight flush
+Four of a kind
+Flush
+Straight
+Three of a kind
+Two pair
+One pair
+High card
+
+
+What I’m looking for:
+Correctness (of course)
+Code organization
+Maintainable, reusable design
+Simplicity

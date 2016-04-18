@@ -1,0 +1,18 @@
+TODO's
+===================================
+
+Create basic page and implement general styling (western-style)
+
+
+PLANS and TOUGHTS
+===================================
+
+Page functionality:
+- click button to get random hand
+- use input field for strings
+- shows the set of hands
+- shows the name of the hand
+
+Think about:
+- download images and name them in a way the name can be easily generated
+- include jQuery
