@@ -27,7 +27,7 @@ J - Jack
 For a list of poker hands and their rules see https://en.wikipedia.org/wiki/List_of_poker_hands
 
 To keep the scope down only consider the following hands:
-Straight flush
+straightFlush
 Four of a kind
 Flush
 Straight

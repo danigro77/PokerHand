@@ -2,33 +2,35 @@ var Deck = Class.create({
     initialize: function() {
         this.cards = [];
         this.hands = [];
-        this.generate();
+        this.generateCards();
     },
-    generate: function() {
-        var suits = SHARED_VARIABLES.suits.types,
-            faces = SHARED_VARIABLES.faces.types;
+    generateCards: function() {
+        var suits = SHARED_VARIABLES.cardAttributes.suits.types,
+            faces = SHARED_VARIABLES.cardAttributes.faces.types;
         var card;
-            for (var suitIndex=0; suitIndex<suits.length; suitIndex++) {
+        
+        for (var suitIndex=0; suitIndex<suits.length; suitIndex++) {
             for (var faceIndex=0; faceIndex<faces.length; faceIndex++) {
-                card = this.buildCard(suits[suitIndex], faces[faceIndex]);
+                card = new Card(faces[faceIndex], suits[suitIndex]);
                 this.cards.push(card);
             }
         }
     },
-    buildCard: function (suit, face) {
-        return new Card(suit, face);
-    },
-    getHand: function(numOfCards) {
-        var randomCard, pickedCards;
-        if (this.cards.length <= numOfCards) {
-            this.generate();
-        }
-        pickedCards = [];
+    generateHand: function(numOfCards) {
+        var randomCard;
+        var pickedCards = [];
         for (var i=0; i<numOfCards; i++) {
             randomCard = this.pickRandomCard();
             pickedCards.push(randomCard);
         }
-        var hand = new Hand(pickedCards);
+        return new Hand(pickedCards);
+    },
+    getHand: function(numOfCards) {
+        var hand;
+        if (this.cards.length <= numOfCards) {
+            this.generateCards();
+        }
+        hand = this.generateHand(numOfCards);
         this.hands.push(hand);
         return hand;
     },

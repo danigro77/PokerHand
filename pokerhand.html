@@ -8,6 +8,8 @@
     <meta name="description" content="Poker Hand">
     <meta name="author" content="Daniela Grossmann">
 
+    <link rel="icon" type="image/png" href="./images/favicon.ico"/>
+
     <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles/main.css?v=1.0">
 
@@ -28,12 +30,12 @@
             <button id="new-hand-random">Random Hand</button>
             <span class="or">OR</span>
             <button id="new-hand-text">Submit Hand</button>
-            <input type="text" placeholder="Put your string-encoded hand of cards here." \>
+            <input type="text" placeholder="Put your string-encoded hand of 5 cards here." \>
         </div>
         <ul id="templates">
             <li class="card">
                 <img src="" alt="" />
-                <span class="name"></span>
+                <div class="name"></div>
             </li>
         </ul>
     </div>
@@ -41,6 +43,7 @@
     <script src="scripts/lib/jquery-2.2.3.min.js"></script>
     <script src="scripts/lib/prototype-1.7.2.js"></script>
     <script src="scripts/helper.js"></script>
+    <script src="scripts/rules.js"></script>
     <script src="scripts/card.js"></script>
     <script src="scripts/hand.js"></script>
     <script src="scripts/deck.js"></script>

@@ -28,6 +28,23 @@ header h1 {
 .cards-container {
     height: 200px;
 }
+li {
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+}
+img {
+    height: 100px;
+}
+.name {
+    text-align: center;
+    vertical-align: top;
+    padding-top: 10px;
+
+}
+img, .name {
+    width: 73px;
+}
 .hand-kind {
     height: 40px;
 }
@@ -52,10 +69,19 @@ input.new-hand, .hand-kind, .cards-container {
 #new-hand-text, input {
     float: right;
 }
+button {
+    background: linen;
+    color: saddlebrown;
+}
 input {
     width: 300px;
     margin-right: 5px;
+    background: linen;
+}
+input.red {
+    color: firebrick;
 }
 .or {
     margin-left: 38px;
+    color: linen;
 }
