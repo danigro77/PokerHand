@@ -20,9 +20,10 @@
 
         var showContent = function(hand) {
             $container.html('');
+            var cards = hand.sortedCards();
 
-            for (var i=0; i< hand.cards.length; i++) {
-                fillContent(hand.cards[i]);
+            for (var i=0; i< cards.length; i++) {
+                fillContent(cards[i]);
             }
             $handKind.html(hand.pokerHand);
         };
