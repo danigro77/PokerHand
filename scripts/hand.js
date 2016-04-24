@@ -70,14 +70,14 @@ var Hand = Class.create({
     },
     applyRules: function() {
         if (this.cards !== undefined && this.cards.length === this.fullHand) {
-            this.sortCards();
+            this.cardsAndStats.rankedCards = this.sortedCards();
             this.countCards();
             var rules = new Rules(this.cardsAndStats);
             return rules.applyToHand();
         }
     },
-    sortCards: function() {
-        this.cardsAndStats.rankedCards = this.cards.sort(function (a, b) {
+    sortedCards: function() {
+         return this.cards.sort(function (a, b) {
             return b.rank - a.rank
         });
     },
